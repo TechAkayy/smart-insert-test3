@@ -3,6 +3,7 @@
     "index.html": {
       "frameworks": [
         "smart-insert-test3",
+        "wordpress.pinegrow",
         "pg.svg.lib",
         "pg.tree.painter",
         "pg.tw.lib",
@@ -23,6 +24,7 @@
   "breakpoints": ["768px", "1024px", "1280px"],
   "frameworks": [
     "smart-insert-test3",
+    "wordpress.pinegrow",
     "pg.svg.lib",
     "pg.tree.painter",
     "pg.tw.lib",
@@ -79,6 +81,7 @@
     "dir": "/Users/techakayy/Local Sites/bakers-delight/app/public/wp-content/themes/bakersdelight",
     "name": "bakers-delight",
     "slug": "bakersdelight",
+    "project_version": "1.0.11",
     "auto_increment_version": "1",
     "page": "index.html",
     "themejson": "true",
@@ -89,15 +92,14 @@
     "block_theme": "true",
     "blocks_type": "native-hybrid",
     "pg_version": "8.2",
-    "blocks_editor_styles": [],
+    "blocks_editor_styles": ["tailwind_theme/tailwind_for_wp_editor.css"],
     "project_type": "theme",
     "blocks_inline_svg": "false",
     "blocks_load_if_rendered": "false",
     "block_category": "my_blocks",
     "block_category_register": "true",
     "block_category_name": "My Blocks",
-    "wc_enabled": "false",
-    "project_version": "1.0.1"
+    "wc_enabled": "false"
   },
   "wp-insight": {
     "menus": ["primary", "social"],

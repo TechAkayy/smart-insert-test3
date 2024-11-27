@@ -152,7 +152,7 @@ if ( ! function_exists( 'bakersdelight_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Scripts Begin */
 
-    wp_register_script( 'inline-script-1', '', [], '1.0.1', false );
+    wp_register_script( 'inline-script-1', '', [], '1.0.11', false );
     wp_enqueue_script( 'inline-script-1' );
     wp_add_inline_script( 'inline-script-1', '/* Pinegrow Interactions, do not remove */ (function () {
         try {
@@ -191,15 +191,25 @@ if ( ! function_exists( 'bakersdelight_enqueue_scripts' ) ) :
         }
       })();');
 
+    wp_register_script( 'inline-script-2', '', [], '1.0.11', false );
+    wp_enqueue_script( 'inline-script-2' );
+    wp_add_inline_script( 'inline-script-2', 'const prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
+      const setting = localStorage.getItem("vueuse-color-scheme") || "auto";
+      const isInitiallyDarkMode = !!(
+        setting === "dark" ||
+        (prefersDark && setting !== "light")
+      );
+      if (isInitiallyDarkMode)
+        document.documentElement.classList.toggle("dark", true);');
+
     /* Pinegrow generated Enqueue Scripts End */
 
         /* Pinegrow generated Enqueue Styles Begin */
 
-    wp_deregister_style( 'bakersdelight-tailwind' );
-    wp_enqueue_style( 'bakersdelight-tailwind', get_template_directory_uri() . '/tailwind_theme/tailwind.css', [], '1.0.1', 'all');
+    wp_enqueue_style( 'bakersdelight-tailwind', get_template_directory_uri() . '/tailwind_theme/tailwind.css', null, '1.0.11', 'all' );
 
     wp_deregister_style( 'bakersdelight-style' );
-    wp_enqueue_style( 'bakersdelight-style', get_bloginfo('stylesheet_url'), [], '1.0.1', 'all');
+    wp_enqueue_style( 'bakersdelight-style', get_bloginfo('stylesheet_url'), [], '1.0.11', 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
@@ -214,6 +224,9 @@ function pgwp_sanitize_placeholder($input) { return $input; }
 /* Pinegrow generated Include Resources Begin */
 require_once "inc/custom.php";
 if( !class_exists( 'PG_Helper_v2' ) ) { require_once "inc/wp_pg_helpers.php"; }
+if( !class_exists( 'PG_Blocks_v3' ) ) { require_once "inc/wp_pg_blocks_helpers.php"; }
+if( !class_exists( 'PG_Smart_Walker_Nav_Menu' ) ) { require_once "inc/wp_smart_navwalker.php"; }
+if( !class_exists( 'PG_Simple_Form_Mailer' ) ) { require_once "inc/wp_simple_form_mailer.php"; }
 
     /* Pinegrow generated Include Resources End */
 
@@ -225,7 +238,9 @@ function bakersdelight_setup_theme_supports() {
     
 //Enable site editor                    
 add_theme_support('block-templates');
-add_theme_support('block-template-parts');
+add_theme_support('block-template-parts');    
+//Tell WP to scope loaded editor styles to the block editor                    
+add_theme_support( 'editor-styles' );
     /* Pinegrow generated Theme Supports End */
 }
 add_action('after_setup_theme', 'bakersdelight_setup_theme_supports');
@@ -252,5 +267,43 @@ $categories = array_merge( $categories, array( array(
 add_action( version_compare('5.8', get_bloginfo('version'), '<=' ) ? 'block_categories_all' : 'block_categories', 'bakersdelight_register_blocks_categories');
 
 /* End of registering Blocks Categories */
+
+
+/* Creating Editor Blocks with Pinegrow */
+
+if ( ! function_exists('bakersdelight_blocks_init') ) :
+function bakersdelight_blocks_init() {
+    // Register blocks. Don't edit anything between the following comments.
+    /* Pinegrow generated Register Pinegrow Blocks Begin */
+    require_once 'blocks/header-nav/header-nav_register.php';
+    require_once 'blocks/hero-banner/hero-banner_register.php';
+    require_once 'blocks/feature/feature_register.php';
+    require_once 'blocks/features/features_register.php';
+    require_once 'blocks/bakery-product/bakery-product_register.php';
+    require_once 'blocks/bakery-products/bakery-products_register.php';
+    require_once 'blocks/testimonial/testimonial_register.php';
+    require_once 'blocks/testimonials/testimonials_register.php';
+    require_once 'blocks/footer/footer_register.php';
+
+    /* Pinegrow generated Register Pinegrow Blocks End */
+}
+add_action('init', 'bakersdelight_blocks_init');
+endif;
+
+/* End of creating Editor Blocks with Pinegrow */
+
+
+/* Loading editor styles for blocks */
+
+function bakersdelight_add_blocks_editor_styles() {
+// Add blocks editor styles. Don't edit anything between the following comments.
+/* Pinegrow generated Load Blocks Editor Styles Begin */
+    add_editor_style( 'tailwind_theme/tailwind_for_wp_editor.css' );
+
+    /* Pinegrow generated Load Blocks Editor Styles End */
+}
+add_action('admin_init', 'bakersdelight_add_blocks_editor_styles');
+
+/* End of loading editor styles for blocks */
 
 ?>
