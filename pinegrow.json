@@ -74,5 +74,49 @@
     "disable_preflight": null,
     "external_config_url": "tailwind.config.js",
     "external_help": null
+  },
+  "wp-theme-info": {
+    "dir": "/Users/techakayy/Local Sites/bakers-delight/app/public/wp-content/themes/bakersdelight",
+    "name": "bakers-delight",
+    "slug": "bakersdelight",
+    "auto_increment_version": "1",
+    "page": "index.html",
+    "themejson": "true",
+    "wpseo": "true",
+    "wpjquery": "false",
+    "generator": "true",
+    "images": {},
+    "block_theme": "true",
+    "blocks_type": "native-hybrid",
+    "pg_version": "8.2",
+    "blocks_editor_styles": [],
+    "project_type": "theme",
+    "blocks_inline_svg": "false",
+    "blocks_load_if_rendered": "false",
+    "block_category": "my_blocks",
+    "block_category_register": "true",
+    "block_category_name": "My Blocks",
+    "wc_enabled": "false",
+    "project_version": "1.0.1"
+  },
+  "wp-insight": {
+    "menus": ["primary", "social"],
+    "taxonomies": ["category", "post_tag"],
+    "customizer_sections": [],
+    "customizer_controls": [],
+    "post_types": ["attachment", "page", "post"],
+    "template_parts": [],
+    "sidebars": [],
+    "master_pages": [],
+    "image_sizes": [
+      "full",
+      "large",
+      "medium",
+      "medium_large",
+      "post-thumbnail",
+      "thumbnail"
+    ],
+    "custom_funcs": [],
+    "block_categories": ["my_blocks"]
   }
 }
