@@ -1,258 +1,581 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
-        <title>New page</title>         
-        <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css">
-        <script>/* Pinegrow Interactions, do not remove */ (function(){try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { window.pgia_small_mq=typeof pgia_small_mq=='string'?pgia_small_mq:'(max-width:767px)';window.pgia_large_mq=typeof pgia_large_mq=='string'?pgia_large_mq:'(min-width:768px)';var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id') && document.documentElement.hasAttribute('data-pg-mobile')) {pgia_small_mq='(min-width:0)';pgia_large_mq='(min-width:99999px)'} pgcss+='@media ' + pgia_small_mq + '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';pgcss+='@media ' + pgia_large_mq + '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}})()</script>
-    </head>     
-    <body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-50"> 
-        <nav class="fixed w-full bg-white dark:bg-gray-950 shadow-lg z-50">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center h-20">
-                    <!-- Logo -->
-                    <div class="flex-shrink-0"><a href="#" class="text-2xl font-serif font-bold text-primary-600">Baker's Delight</a>
-                    </div>
-                    <!-- Desktop Menu -->
-                    <div class="hidden md:flex space-x-8"><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">Home</a><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">Our Breads</a><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">Pre-order</a><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">Locations</a><a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">Contact</a>
-                    </div>
-                    <div data-pg-name="Dark-Mode-Pt-Island">
-                        <script type="module" data-pg-name="Dark-Mode-Pt-App">
-  import { createApp } from 'https://unpkg.com/petite-vue?module'
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>New page</title>
+    <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css" />
+    <script>
+      /* Pinegrow Interactions, do not remove */ (function () {
+        try {
+          if (!document.documentElement.hasAttribute("data-pg-ia-disabled")) {
+            window.pgia_small_mq =
+              typeof pgia_small_mq == "string"
+                ? pgia_small_mq
+                : "(max-width:767px)";
+            window.pgia_large_mq =
+              typeof pgia_large_mq == "string"
+                ? pgia_large_mq
+                : "(min-width:768px)";
+            var style = document.createElement("style");
+            var pgcss =
+              'html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';
+            if (
+              document.documentElement.hasAttribute("data-pg-id") &&
+              document.documentElement.hasAttribute("data-pg-mobile")
+            ) {
+              pgia_small_mq = "(min-width:0)";
+              pgia_large_mq = "(min-width:99999px)";
+            }
+            pgcss +=
+              "@media " +
+              pgia_small_mq +
+              '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';
+            pgcss +=
+              "@media " +
+              pgia_large_mq +
+              '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';
+            style.innerHTML = pgcss;
+            document.querySelector("head").appendChild(style);
+          }
+        } catch (e) {
+          console && console.log(e);
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-50">
+    <nav class="fixed w-full bg-white dark:bg-gray-950 shadow-lg z-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="text-2xl font-serif font-bold text-primary-600"
+              >Baker's Delight</a
+            >
+          </div>
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+              >Home</a
+            ><a
+              href="#"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+              >Our Breads</a
+            ><a
+              href="#"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+              >Pre-order</a
+            ><a
+              href="#"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+              >Locations</a
+            ><a
+              href="#"
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+              >Contact</a
+            >
+          </div>
+          <div data-pg-name="Dark-Mode-Pt-Island">
+            <script type="module" data-pg-name="Dark-Mode-Pt-App">
+              import { createApp } from "https://unpkg.com/petite-vue?module";
 
-  const state = {
-    // state exposed to all expressions within v-scope regions
-    darkMode: null,
-    // methods
-    isDarkMode() {
-      return (
-        localStorage.getItem('vueuse-color-scheme') === 'dark' ||
-        (!localStorage.getItem('vueuse-color-scheme') &&
-          window.matchMedia('(prefers-color-scheme: dark)')
-            .matches)
-      )
-    },
-    initDarkMode() {
-      this.darkMode = this.isDarkMode()
-    },
-    applyDarkMode() {
-      if (this.darkMode !== null) {
-        localStorage.setItem(
-          'vueuse-color-scheme',
-          this.darkMode ? 'dark' : 'light'
-        )
-        document.documentElement.classList.toggle(
-          'dark',
-          this.darkMode
-        )
-      }
-    },
-  }
+              const state = {
+                // state exposed to all expressions within v-scope regions
+                darkMode: null,
+                // methods
+                isDarkMode() {
+                  return (
+                    localStorage.getItem("vueuse-color-scheme") === "dark" ||
+                    (!localStorage.getItem("vueuse-color-scheme") &&
+                      window.matchMedia("(prefers-color-scheme: dark)").matches)
+                  );
+                },
+                initDarkMode() {
+                  this.darkMode = this.isDarkMode();
+                },
+                applyDarkMode() {
+                  if (this.darkMode !== null) {
+                    localStorage.setItem(
+                      "vueuse-color-scheme",
+                      this.darkMode ? "dark" : "light"
+                    );
+                    document.documentElement.classList.toggle(
+                      "dark",
+                      this.darkMode
+                    );
+                  }
+                },
+              };
 
-  createApp(state).mount("#dark-mode")
-</script>
-                        <label data-pg-name="Dark-Mode-Pt-Scope" id="dark-mode" class="cursor-pointer inline-flex items-center mr-4" v-scope="{}">
-                            <input type="checkbox" value="" class="sr-only peer" v-model="darkMode" v-on:vue:mounted="initDarkMode()" v-effect="darkMode, applyDarkMode()"/><span class="after:absolute after:bg-white after:border after:border-gray-300 after:content-[''] after:h-5 after:rounded-full after:start-[2px] after:top-[2px] after:transition-all after:w-5 bg-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:peer-focus:ring-primary-800 h-6 peer peer-checked:after:border-white peer-checked:after:translate-x-full peer-checked:bg-primary-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 relative rounded-full rtl:peer-checked:after:-translate-x-full w-11"></span>
-                        </label>
-                    </div>
-                    <!-- Mobile menu button -->
-                    <div class="md:hidden">
-                        <button class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+              createApp(state).mount("#dark-mode");
+            </script>
+            <label
+              data-pg-name="Dark-Mode-Pt-Scope"
+              id="dark-mode"
+              class="cursor-pointer inline-flex items-center mr-4"
+              v-scope="{}"
+            >
+              <input
+                type="checkbox"
+                value=""
+                class="sr-only peer"
+                v-model="darkMode"
+                v-on:vue:mounted="initDarkMode()"
+                v-effect="darkMode, applyDarkMode()"
+              /><span
+                class="after:absolute after:bg-white after:border after:border-gray-300 after:content-[''] after:h-5 after:rounded-full after:start-[2px] after:top-[2px] after:transition-all after:w-5 bg-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:peer-focus:ring-primary-800 h-6 peer peer-checked:after:border-white peer-checked:after:translate-x-full peer-checked:bg-primary-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-secondary-300 relative rounded-full rtl:peer-checked:after:-translate-x-full w-11"
+              ></span>
+            </label>
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden">
+            <button
+              class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header
+      class="bg-center bg-cover bg-design-image flex items-center justify-center min-h-screen relative"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="container mx-auto px-4 relative text-center">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6">
+          Fresh Baked Happiness
+        </h1>
+        <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">
+          Discover our artisanal breads and pastries, baked fresh daily with
+          love and tradition
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#"
+            class="bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-full text-lg"
+            >Pre-Order Now</a
+          ><a
+            href="#"
+            class="bg-white hover:bg-gray-100 text-primary-600 font-bold py-3 px-8 rounded-full text-lg"
+            >Find a Store</a
+          >
+        </div>
+      </div>
+    </header>
+    <section class="py-16 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-12">
+          Why Choose Baker's Delight?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-8 h-8 text-primary-600 dark:text-primary-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
             </div>
-        </nav>
-        <header class="relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1546237769-6f84ec1a512a?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDh8fGJha2VyeSUyMGhlcm98ZW58MHx8fHwxNzMyNjU3MzU0fDA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop');">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-            <div class="container mx-auto px-4 relative text-center">
-                <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6">Fresh Baked Happiness</h1>
-                <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">Discover our artisanal breads and pastries, baked fresh daily with love and tradition</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="#" class="bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 px-8 rounded-full text-lg">Pre-Order Now</a><a href="#" class="bg-white hover:bg-gray-100 text-primary-600 font-bold py-3 px-8 rounded-full text-lg">Find a Store</a>
-                </div>
+            <h3 class="text-xl font-bold mb-3">Fresh Daily</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Baked fresh every morning using premium ingredients and
+              traditional recipes
+            </p>
+          </div>
+          <div
+            class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-8 h-8 text-primary-600 dark:text-primary-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
             </div>
-        </header>
-        <section class="py-16 bg-gray-50 dark:bg-gray-900">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-12">Why Choose Baker's Delight?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Fresh Daily</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Baked fresh every morning using premium ingredients and traditional recipes</p>
-                    </div>
-                    <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Easy Pre-Order</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Skip the queue by ordering ahead and picking up at your convenience</p>
-                    </div>
-                    <div class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-primary-600 dark:text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Local Stores</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Find your nearest Baker's Delight with our store locator</p>
-                    </div>
-                </div>
+            <h3 class="text-xl font-bold mb-3">Easy Pre-Order</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Skip the queue by ordering ahead and picking up at your
+              convenience
+            </p>
+          </div>
+          <div
+            class="text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-8 h-8 text-primary-600 dark:text-primary-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg>
             </div>
-        </section>
-        <section class="py-16 bg-gray-50 dark:bg-gray-900">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-12">Our Fresh Baked Delights</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDEwfHxicmVhZHxlbnwwfHx8fDE3MzI2NjAyMTJ8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" alt="Artisan Sourdough" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"/>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
-                            <h3 class="text-white font-bold text-lg">Artisan Sourdough</h3>
-                        </div>
-                    </div>
-                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1608039783021-6116a558f0c5?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDF8fHBhc3RyeXxlbnwwfHx8fDE3MzI2NjAyMTN8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" alt="Fresh Croissants" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"/>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
-                            <h3 class="text-white font-bold text-lg">Fresh Croissants</h3>
-                        </div>
-                    </div>
-                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1556471013-0001958d2f12?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDE1fHxicmVhZHxlbnwwfHx8fDE3MzI2NjAyMTJ8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" alt="Whole Grain Loaves" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"/>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
-                            <h3 class="text-white font-bold text-lg">Whole Grain Loaves</h3>
-                        </div>
-                    </div>
-                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1608039783021-6116a558f0c5?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDF8fHBhc3RyeXxlbnwwfHx8fDE3MzI2NjAyMTN8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" alt="Sweet Danishes" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"/>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
-                            <h3 class="text-white font-bold text-lg">Sweet Danishes</h3>
-                        </div>
-                    </div>
-                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1530590543196-9faf82fed4ea?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDd8fGJyZWFkfGVufDB8fHx8MTczMjY2MDIxMnww&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" alt="Baguettes" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"/>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
-                            <h3 class="text-white font-bold text-lg">Baguettes</h3>
-                        </div>
-                    </div>
-                    <div class="relative group overflow-hidden rounded-lg shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1591538001662-0d5a25234305?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDExfHxwYXN0cnl8ZW58MHx8fHwxNzMyNjYwMjEzfDA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" alt="Gourmet Pies" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"/>
-                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60">
-                            <h3 class="text-white font-bold text-lg">Gourmet Pies</h3>
-                        </div>
-                    </div>
-                </div>
+            <h3 class="text-xl font-bold mb-3">Local Stores</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Find your nearest Baker's Delight with our store locator
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-12">
+          Our Fresh Baked Delights
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDEwfHxicmVhZHxlbnwwfHx8fDE3MzI2NjAyMTJ8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop"
+              alt="Artisan Sourdough"
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60"
+            >
+              <h3 class="text-white font-bold text-lg">Artisan Sourdough</h3>
             </div>
-        </section>
-        <section class="py-16 bg-white dark:bg-gray-950">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-12">What Our Customers Say</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1516197370049-569c4eaba1d6?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDR8fGN1c3RvbWVyfGVufDB8fHx8MTczMjY1Mzc4OHww&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" alt="Sarah Wilson" class="w-16 h-16 rounded-full object-cover"/>
-                            <div class="ml-4">
-                                <h3 class="font-bold text-lg">Sarah Wilson</h3>
-                                <p class="text-gray-600 dark:text-gray-400">Local Food Blogger</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300">"Their sourdough is absolutely amazing! I visit every weekend for my fresh bread fix. The staff is always friendly and helpful."</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDE1fHxjdXN0b21lcnxlbnwwfHx8fDE3MzI2NTM3ODh8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" alt="Mike Thompson" class="w-16 h-16 rounded-full object-cover"/>
-                            <div class="ml-4">
-                                <h3 class="font-bold text-lg">Mike Thompson</h3>
-                                <p class="text-gray-600 dark:text-gray-400">Regular Customer</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300">"The pre-order system is a game-changer! I can grab my favorite pastries on my way to work without any wait."</p>
-                    </div>
-                    <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDh8fGN1c3RvbWVyfGVufDB8fHx8MTczMjY1Mzc4OHww&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop" alt="Emily Chen" class="w-16 h-16 rounded-full object-cover"/>
-                            <div class="ml-4">
-                                <h3 class="font-bold text-lg">Emily Chen</h3>
-                                <p class="text-gray-600 dark:text-gray-400">School Teacher</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300">"My students love stopping by after school. The variety of treats and welcoming atmosphere make it a perfect spot for the community."</p>
-                    </div>
-                </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1608039783021-6116a558f0c5?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDF8fHBhc3RyeXxlbnwwfHx8fDE3MzI2NjAyMTN8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop"
+              alt="Fresh Croissants"
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60"
+            >
+              <h3 class="text-white font-bold text-lg">Fresh Croissants</h3>
             </div>
-        </section>
-        <footer class="bg-gray-100 dark:bg-gray-900 pt-12 pb-8">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                    <div>
-                        <h3 class="text-2xl font-serif font-bold text-primary-600 mb-4">Baker's Delight</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Bringing fresh, quality baked goods to your neighborhood since 1980.</p>
-                        <div class="flex space-x-4"><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600"> <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                                </svg> </a><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600"> <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                                </svg> </a><a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600"> <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
-                                </svg> </a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-lg mb-4">Quick Links</h4>
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Our Story</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Careers</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Store Locator</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Franchise Opportunities</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-lg mb-4">Customer Service</h4>
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">FAQs</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-primary-600">Terms of Service</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-lg mb-4">Newsletter</h4>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Subscribe to get special offers and updates.</p>
-                        <form class="flex">
-                            <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-l-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:ring-primary-500 focus:border-primary-500">
-                            <button class="px-4 py-2 bg-primary-600 text-white rounded-r-lg hover:bg-primary-700">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="border-t border-gray-200 dark:border-gray-800 pt-8">
-                    <p class="text-center text-gray-600 dark:text-gray-400">&copy; 2024 Baker's Delight. All rights reserved.</p>
-                </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1556471013-0001958d2f12?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDE1fHxicmVhZHxlbnwwfHx8fDE3MzI2NjAyMTJ8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop"
+              alt="Whole Grain Loaves"
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60"
+            >
+              <h3 class="text-white font-bold text-lg">Whole Grain Loaves</h3>
             </div>
-        </footer>
-    </body>     
+          </div>
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1608039783021-6116a558f0c5?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDF8fHBhc3RyeXxlbnwwfHx8fDE3MzI2NjAyMTN8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop"
+              alt="Sweet Danishes"
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60"
+            >
+              <h3 class="text-white font-bold text-lg">Sweet Danishes</h3>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1530590543196-9faf82fed4ea?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDd8fGJyZWFkfGVufDB8fHx8MTczMjY2MDIxMnww&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop"
+              alt="Baguettes"
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60"
+            >
+              <h3 class="text-white font-bold text-lg">Baguettes</h3>
+            </div>
+          </div>
+          <div class="relative group overflow-hidden rounded-lg shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1591538001662-0d5a25234305?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDExfHxwYXN0cnl8ZW58MHx8fHwxNzMyNjYwMjEzfDA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop"
+              alt="Gourmet Pies"
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-60"
+            >
+              <h3 class="text-white font-bold text-lg">Gourmet Pies</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 bg-white dark:bg-gray-950">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-center mb-12">
+          What Our Customers Say
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1516197370049-569c4eaba1d6?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDR8fGN1c3RvbWVyfGVufDB8fHx8MTczMjY1Mzc4OHww&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop"
+                alt="Sarah Wilson"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div class="ml-4">
+                <h3 class="font-bold text-lg">Sarah Wilson</h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                  Local Food Blogger
+                </p>
+              </div>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">
+              "Their sourdough is absolutely amazing! I visit every weekend for
+              my fresh bread fix. The staff is always friendly and helpful."
+            </p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDE1fHxjdXN0b21lcnxlbnwwfHx8fDE3MzI2NTM3ODh8MA&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop"
+                alt="Mike Thompson"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div class="ml-4">
+                <h3 class="font-bold text-lg">Mike Thompson</h3>
+                <p class="text-gray-600 dark:text-gray-400">Regular Customer</p>
+              </div>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">
+              "The pre-order system is a game-changer! I can grab my favorite
+              pastries on my way to work without any wait."
+            </p>
+          </div>
+          <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-lg shadow-lg">
+            <div class="flex items-center mb-6">
+              <img
+                src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixid=M3wyMDkyMnwwfDF8c2VhcmNofDh8fGN1c3RvbWVyfGVufDB8fHx8MTczMjY1Mzc4OHww&ixlib=rb-4.0.3q=85&fm=jpg&crop=faces&cs=srgb&w=1200&h=800&fit=crop"
+                alt="Emily Chen"
+                class="w-16 h-16 rounded-full object-cover"
+              />
+              <div class="ml-4">
+                <h3 class="font-bold text-lg">Emily Chen</h3>
+                <p class="text-gray-600 dark:text-gray-400">School Teacher</p>
+              </div>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300">
+              "My students love stopping by after school. The variety of treats
+              and welcoming atmosphere make it a perfect spot for the
+              community."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-100 dark:bg-gray-900 pt-12 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="text-2xl font-serif font-bold text-primary-600 mb-4">
+              Baker's Delight
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Bringing fresh, quality baked goods to your neighborhood since
+              1980.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg> </a
+              ><a
+                href="#"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg> </a
+              ><a
+                href="#"
+                class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+              >
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+                  >Our Story</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+                  >Store Locator</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+                  >Franchise Opportunities</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">Customer Service</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+                  >FAQs</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 dark:text-gray-400 hover:text-primary-600"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-4">Newsletter</h4>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">
+              Subscribe to get special offers and updates.
+            </p>
+            <form class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="flex-1 px-4 py-2 rounded-l-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:ring-primary-500 focus:border-primary-500"
+              />
+              <button
+                class="px-4 py-2 bg-primary-600 text-white rounded-r-lg hover:bg-primary-700"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="border-t border-gray-200 dark:border-gray-800 pt-8">
+          <p class="text-center text-gray-600 dark:text-gray-400">
+            &copy; 2024 Baker's Delight. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
